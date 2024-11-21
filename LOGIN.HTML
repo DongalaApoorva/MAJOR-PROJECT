@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var eyeIcon = document.getElementById("eye-icon");
+
+            // Toggle password visibility
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.textContent = "👁️";  // Eye open symbol
+            } else {
+                passwordField.type = "password";
+                eyeIcon.textContent = "👁️‍🗨️";  // Eye closed symbol
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <main>
+        <form method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <span id="eye-icon" class="eye-icon" onclick="togglePassword()">👁️‍🗨️</span>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+    </main>
+</body>
+</html>
