@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var eyeIcon = document.getElementById("eye-icon");
+
+            // Toggle password visibility
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.textContent = "👁️";  // Eye open symbol
+            } else {
+                passwordField.type = "password";
+                eyeIcon.textContent = "👁️‍🗨️";  // Eye closed symbol
+            }
+        }
+
+        function toggleConfirmPassword() {
+            var confirmPasswordField = document.getElementById("confirm_password");
+            var confirmEyeIcon = document.getElementById("confirm-eye-icon");
+
+            // Toggle confirm password visibility
+            if (confirmPasswordField.type === "password") {
+                confirmPasswordField.type = "text";
+                confirmEyeIcon.textContent = "👁️";  // Eye open symbol
+            } else {
+                confirmPasswordField.type = "password";
+                confirmEyeIcon.textContent = "👁️‍🗨️";  // Eye closed symbol
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+    </header>
+    <main>
+        <form method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <span id="eye-icon" class="eye-icon" onclick="togglePassword()">👁️‍🗨️</span>
+            </div>
+
+            <label for="confirm_password">Confirm Password</label>
+            <div class="password-container">
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <span id="confirm-eye-icon" class="eye-icon" onclick="toggleConfirmPassword()">👁️‍🗨️</span>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    </main>
+</body>
+</html>
