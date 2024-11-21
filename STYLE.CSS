@@ -1,0 +1,292 @@
+/* Global Styles */
+/* Background Image for the Entire Page */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://www.w3schools.com/w3images/fjords.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Background Image for the Header */
+header {
+  background: url('https://www.w3schools.com/w3images/mountains.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Main Container */
+main {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+form input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #3b413b;
+  outline: none;
+}
+
+form button {
+  padding: 12px;
+  background-color: #846480;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #be9eb7;
+}
+
+/* Password Toggle */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: calc(100% - 30px);
+  padding-right: 30px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Links */
+a {
+  color: #503c4e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Flash message styling */
+.flash {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.flash.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.flash.danger {
+  background-color: #f4a0a8;
+  color: white;
+}
+
+/* Blog Dashboard */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Added gap between blog cards */
+  margin-top: 30px;
+}
+
+.blog-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;  /* Take up full width for each blog card */
+  max-width: 600px;  /* Limit the width of each blog card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px; /* Add margin at the bottom to separate cards */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  height: 80px;  /* Limit text height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blog-card a {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #4CAF50;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+/* Profile Page */
+.profile-container {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-info textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.profile-info img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Profile Picture */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Dashboard grid styles */
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.blog-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.blog-item a {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #e39da4;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
